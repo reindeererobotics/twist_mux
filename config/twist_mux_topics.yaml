@@ -9,18 +9,18 @@ twist_mux:
   ros__parameters:
     topics:
       navigation:
-        topic   : nav_vel
+        topic   : cmd_vel_smoothed # cmd_vel_nav # Smoothed is from Nav2 Velocity smoother. See navigation_launch.py for remappings
         timeout : 0.5
         priority: 10
       joystick:
-        topic   : joy_vel
+        topic   : cmd_vel_base
         timeout : 0.5
         priority: 100
-      keyboard:
-        topic   : key_vel
-        timeout : 0.5
-        priority: 90
-      tablet:
-        topic   : tab_vel
-        timeout : 0.5
-        priority: 100
+      # keyboard:
+      #   topic   : key_vel
+      #   timeout : 0.5
+      #   priority: 90
+      # tablet:
+      #   topic   : tab_vel
+      #   timeout : 0.5
+      #   priority: 100
